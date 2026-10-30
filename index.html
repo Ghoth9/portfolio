@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nonpawit Senset (Ghoth) — พอร์ตโฟลิโอพัฒนาระบบเว็บแอปพลิเคชันองค์กร (TTS Ops Hub 16 โมดูล, Foresee Field Ops), ระบบมอนิเตอร์ Ping กล้องวงจรปิด 505 จุด (14 สภ.), เกม Python และงาน 3D/2D Motion Graphics" />
+  <title>Nonpawit Senset (Ghoth) — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="navbar">
+    <div class="header-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-mark"></span>
+        <span>Nonpawit Senset (Ghoth)</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="เมนูหลัก">
+        <a href="#flagship" class="nav-link active" data-section="flagship">ผลงานเด่น</a>
+        <a href="#index" class="nav-link" data-section="index">คลังโปรเจกต์ (6)</a>
+        <a href="#capabilities" class="nav-link" data-section="capabilities">ความเชี่ยวชาญ</a>
+        <a href="#story" class="nav-link" data-section="story">ที่มาและช่องทาง</a>
+        <a href="#contact" class="nav-link" data-section="contact">ติดต่อ</a>
+      </nav>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="เปิดเมนูนำทาง">เมนู</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1 class="hero-headline" id="heroHeadline">
+              พัฒนาเว็บแอปพลิเคชัน ระบบบริหารจัดการองค์กร และงานมัลติมีเดีย
+            </h1>
+            <p class="hero-description" id="heroDesc">
+              ผมเป็นนักพัฒนาสาย <strong>Full-Stack, Enterprise Web และ Data Automation</strong> เน้นสร้างระบบที่ตอบโจทย์การทำงานจริง ตั้งแต่แพลตฟอร์ม ERP จัดการปฏิบัติการองค์กร (TTS Ops Hub) ระบบรายงานช่างภาคสนามผ่าน LINE LIFF (Foresee) ไปจนถึงผลงานออกแบบ <strong>3D/2D Motion Graphics</strong>
+            </p>
+
+            <div class="hero-status-pill">
+
+              <span class="pulse-dot"></span>
+
+              <span><strong>พร้อมเริ่มงานทันที</strong> • พักอยู่ลาดพร้าว 122 กทม. (On-site / Hybrid / Remote)</span>
+
+            </div>
+
+            <div class="hero-cta-row" id="heroCta">
+              <a href="#flagship" class="btn btn-primary">ดูผลงานไฮไลต์พร้อมภาพหน้าจอจริง</a>
+              <a href="#index" class="btn btn-secondary">สำรวจคลังโปรเจกต์ทั้งหมด (6)</a>
+            </div>
+
+            <div class="hero-facts" id="heroFacts">
+              <div class="fact-box">
+                <span class="fact-num"><span class="count-num" data-target="16">16</span> โมดูล</span>
+                <span class="fact-desc">TTS Company Ops Hub v2.0 PRO</span>
+              </div>
+              <div class="fact-box">
+                <span class="fact-num"><span class="count-num" data-target="505">505</span> จุด</span>
+                <span class="fact-desc">ระบบมอนิเตอร์กล้อง &amp; ตู้เครือข่าย 14 สภ.</span>
+              </div>
+              <div class="fact-box">
+                <span class="fact-num"><span class="count-num" data-target="100">100</span>%</span>
+                <span class="fact-desc">พัฒนาและใช้งานจริงหน้างาน</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Workbench Summary -->
+          <aside class="workbench-card" id="heroWorkbench" aria-label="สรุปขอบเขตงาน 4 ด้าน">
+            <div class=workbench-nav role=tablist>
+              <button type="button" class="wb-tab active" data-tab="web" role="tab" aria-selected="true">ระบบ ERP &amp; ภาคสนาม</button>
+              <button type="button" class="wb-tab" data-tab="auto" role="tab" aria-selected="false">ระบบ Ping กล้อง &amp; GIS</button>
+              <button type="button" class="wb-tab" data-tab="iot" role="tab" aria-selected="false">เกม Python &amp; Logic</button>
+              <button type="button" class="wb-tab" data-tab="motion" role="tab" aria-selected="false">งาน 3D/2D Motion</button>
+            </div>
+            <div class="workbench-stage" id="wbStage">
+              <div>
+                <h2 class="wb-title" id="wbTitle">ระบบ ERP ปฏิบัติการองค์กรและระบบรายงานภาคสนาม</h2>
+                <p class="wb-text" id="wbText">
+                  พัฒนา TTS Company Ops Hub v2.0 PRO ที่รวม 16 โมดูลของบริษัทไว้ในที่เดียว (คลัง S/N, บอท LINE คู่, HR คำนวณ OT/สลิปเงินเดือน, ถอดแบบ BOQ) และระบบ Foresee Field Operations v2.0 สำหรับทีมช่างเทคนิค
+                </p>
+              </div>
+              <div class="wb-pills" id="wbPills">
+                <span class="pill">TTS Ops Hub (16 โมดูล)</span>
+                <span class="pill">Foresee Field Ops v2.0</span>
+                <span class="pill">Dual LINE OA Bots</span>
+                <span class="pill">Supabase RLS &amp; Realtime</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flagship Case Studies (4 Featured Works with Real Screenshots) -->
+    <section class="section" id="flagship">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">ผลงานเด่นและระบบไฮไลต์ที่ใช้งานจริง</h2>
+          <p class="section-lead">
+            ภาพหน้าจอจริงจากระบบที่พัฒนาขึ้นใช้งานในระดับองค์กรและผลงานสร้างสรรค์ คลิกที่การ์ดหรือรูปภาพเพื่อเปิดดูภาพขนาดใหญ่และรายละเอียดเชิงลึก
+          </p>
+        </div>
+
+        <div class="flagship-list">
+          <!-- 1. TTS Company Ops Hub v2.0 PRO -->
+          <article class="flagship-item" data-project-id="tts-ops-hub">
+            <div class="flagship-info">
+              <div>
+                <span class="flagship-meta">Enterprise ERP &amp; Operations Hub (16 Modules)</span>
+                <h3 class="flagship-title">TTS Company Ops Hub v2.0 PRO</h3>
+                <p class="flagship-sub">ระบบบริหารจัดการงานปฏิบัติการองค์กรครบวงจร 16 โมดูล (บจก. ท้อป โทเทิล ซิสเทม)</p>
+                <p class="flagship-desc">
+                  ระบบศูนย์กลางปฏิบัติการองค์กรที่รวบรวมทุกแผนกไว้ในแพลตฟอร์มเดียว ตั้งแต่ระบบแจ้งซ่อม แผนที่กล้องวงจรปิด GIS คลังสินค้าคุมเลข S/N รายชิ้น ไปจนถึงระบบ HR ซิงค์สแกนนิ้ว คำนวณ OT 2 ขั้นตอน ออกสลิปเงินเดือนล็อคสิทธิ์ (Supabase RLS) ถอดแบบ BOQ และบอทแจ้งเตือน LINE แยก 2 บัญชีอัจฉริยะ
+                </p>
+              </div>
+              <div class="flagship-footer">
+                <div class="tag-group">
+                  <span class="tag">16 Enterprise Modules</span>
+                  <span class="tag">Supabase PostgreSQL (RLS)</span>
+                  <span class="tag">Dual LINE OA Bots</span>
+                  <span class="tag">BOQ &amp; S/N Inventory</span>
+                </div>
+                <span class="open-detail-label">คลิกดูภาพหน้าจอจริงและ 16 โมดูล</span>
+              </div>
+            </div>
+            <div class="flagship-media">
+              <div class="media-frame">
+                <img src="/images/projects/ttshub.png" alt="TTS Company Ops Hub v2.0 PRO Screenshot" loading="lazy" />
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. TTS Hub Highlight: CCTV Ping & Latency Monitor -->
+          <article class="flagship-item" data-project-id="ttshub-cctv-ping">
+            <div class="flagship-info">
+              <div>
+                <span class="flagship-meta">⭐ FEATURED HIGHLIGHT IN TTS OPS HUB</span>
+                <h3 class="flagship-title">ระบบมอนิเตอร์สถานะกล้องดับ &amp; ค่าความหน่วงสัญญาณ (Ping &amp; Latency)</h3>
+                <p class="flagship-sub">ตรวจเช็คสถานะออนไลน์ของกล้องวงจรปิดและตู้ควบคุม 505 อุปกรณ์ ครอบคลุม 14 สภ. อัตโนมัติทุก 2 นาที</p>
+                <p class="flagship-desc">
+                  ฟังก์ชันไฮไลต์เด่นภายในระบบ TTS Ops Hub ที่คอยยิงตรวจสอบสัญญาณ (Ping) อุปกรณ์ NVR/Switch และกล้องวงจรปิดหน้างานจริงรวม 505 จุด แยกสถานะชัดเจนระหว่างออนไลน์ปกติ (1–14ms), สัญญาณหน่วง (≥15ms) และออฟไลน์ พร้อมระบบแจ้งเตือนบนหน้าเว็บและ LINE อัตโนมัติเมื่อขาดการติดต่อครบ 3 รอบ (5 นาที) และเชื่อมโยงพิกัดแผนที่ดาวเทียม GIS
+                </p>
+              </div>
+              <div class="flagship-footer">
+                <div class="tag-group">
+                  <span class="tag">505 Devices Monitored</span>
+                  <span class="tag">Real-time Ping (1–14ms)</span>
+                  <span class="tag">14 Police Stations (สภ.)</span>
+                  <span class="tag">Satellite GIS Map</span>
+                </div>
+                <span class="open-detail-label">คลิกดูภาพตาราง Ping กล้องและสถิติ</span>
+              </div>
+            </div>
+            <div class="flagship-media">
+              <div class="media-frame">
+                <img src="/images/projects/ttshub-ping.png" alt="ระบบมอนิเตอร์สถานะกล้องดับ & ค่าความหน่วงสัญญาณ (Ping & Latency)" loading="lazy" />
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Foresee Field Operations v2.0 -->
+          <article class="flagship-item" data-project-id="foresee-field-ops">
+            <div class="flagship-info">
+              <div>
+                <span class="flagship-meta">LINE LIFF v2 &amp; Supabase Realtime WebSockets</span>
+                <h3 class="flagship-title">Foresee Field Operations &amp; Task Management v2.0</h3>
+                <p class="flagship-sub">ระบบบริหารจัดการงานภาคสนามและรายงานผลปฏิบัติงานแบบ Real-Time (Foresee Technology)</p>
+                <p class="flagship-desc">
+                  แพลตฟอร์มเชื่อมต่อทีมช่างภาคสนามเข้ากับศูนย์บัญชาการผ่าน LINE LIFF SDK v2 มาพร้อมระบบบีบอัดรูปถ่ายหน้างานด้วย HTML5 Canvas ลดขนาดไฟล์กว่า 80% ก่อนอัปโหลด ส่งการ์ดรายงาน LINE Flex Message เข้ากลุ่มอัตโนมัติ และซิงค์ข้อมูลเข้าแดชบอร์ดผู้บริหารแบบ 0-Latency ด้วย Supabase Realtime
+                </p>
+              </div>
+              <div class="flagship-footer">
+                <div class="tag-group">
+                  <span class="tag">LINE LIFF v2 &amp; Flex Message</span>
+                  <span class="tag">Supabase Realtime (0-Latency)</span>
+                  <span class="tag">HTML5 Canvas Compression</span>
+                  <span class="tag">GAS Dual Sync</span>
+                </div>
+                <span class="open-detail-label">คลิกดูภาพแดชบอร์ดและสถาปัตยกรรม</span>
+              </div>
+            </div>
+            <div class="flagship-media">
+              <div class="media-frame">
+                <img src="/images/projects/foresee.png" alt="Foresee Field Operations v2.0 Dashboard" loading="lazy" />
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Zeroexter Desing 3D/2D Motion Graphics -->
+          <article class="flagship-item" data-project-id="motion-zeroexter">
+            <div class="flagship-info">
+              <div>
+                <span class="flagship-meta">3D / 2D Motion Graphics &amp; Visual Direction</span>
+                <h3 class="flagship-title">Zeroexter Desing — ผลงาน 3D / 2D Motion Graphics</h3>
+                <p class="flagship-sub">ช่อง YouTube @zeroexterdesing44 รวมผลงานออกแบบ 3D/2D Intro, แอนิเมชัน และ Visual Effects</p>
+                <p class="flagship-desc">
+                  ผลงานการออกแบบกราฟิกเคลื่อนไหว 3D และ 2D ด้วยโปรแกรม Cinema 4D และ After Effects เน้นการจัดแสงเงา มุมกล้อง และการเคลื่อนไหวเข้าจังหวะเสียงดนตรี มีตัวอย่างวิดีโอให้กดดูพร้อมเล่นผ่าน Player ในเว็บได้ทันที และยังมีผลงานอื่นๆ อีกมากในช่อง YouTube
+                </p>
+              </div>
+              <div class="flagship-footer">
+                <div class="tag-group">
+                  <span class="tag">Cinema 4D</span>
+                  <span class="tag">After Effects</span>
+                  <span class="tag">3D/2D Motion</span>
+                  <span class="tag">@zeroexterdesing44</span>
+                </div>
+                <span class="open-detail-label">คลิกเพื่อเปิดเครื่องเล่นวิดีโอตัวอย่าง</span>
+              </div>
+            </div>
+            <div class="flagship-media">
+              <div class="media-frame">
+                <img src="/images/projects/zeroexter-desing.png" alt="Zeroexter Desing YouTube Channel" loading="lazy" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete Visual Project Gallery (All 6 Real Projects with Images + GSAP Flip) -->
+    <section class="section" id="index">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">คลังโปรเจกต์และผลงานทั้งหมด (6 รายการ)</h2>
+          <p class="section-lead">
+            รวมทุกโปรเจกต์พร้อมรูปภาพหน้าจอจริง กดเลือกหมวดหมู่เพื่อดูแอนิเมชันสลับการ์ด (GSAP Flip) หรือคลิกที่การ์ดเพื่อเปิดดูภาพขนาดใหญ่และวิดีโอตัวอย่าง
+          </p>
+        </div>
+
+        <div class="filter-tabs" role="group" aria-label="กรองหมวดหมู่โปรเจกต์">
+          <button type="button" class="filter-btn active" data-filter="all">ทั้งหมด (6)</button>
+          <button type="button" class="filter-btn" data-filter="web">เว็บแอป &amp; ระบบองค์กร (2)</button>
+          <button type="button" class="filter-btn" data-filter="automation">ระบบ Ping กล้อง &amp; เครือข่าย (1)</button>
+          <button type="button" class="filter-btn" data-filter="iot">เกม Python &amp; ตรรกะโปรแกรม (1)</button>
+          <button type="button" class="filter-btn" data-filter="motion">3D/2D Motion &amp; โปรไฟล์ (2)</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Populated dynamically with images from projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">ขอบเขตความเชี่ยวชาญและเครื่องมือ</h2>
+          <p class="section-lead">
+            เทคโนโลยีที่ใช้งานจริงในการพัฒนาโปรเจกต์ตั้งแต่ระบบหน้าบ้าน ระบบฐานข้อมูลเรียลไทม์ ไปจนถึงงานกราฟิก 3D/2D
+          </p>
+        </div>
+
+        <div class="cap-grid">
+          <div class="cap-card">
+            <div>
+              <h3>Enterprise Web, PWA &amp; LINE Ecosystem</h3>
+              <p>พัฒนาเว็บแอปพลิเคชันระดับองค์กรและระบบภาคสนามที่เชื่อมต่อกับ LINE LIFF v2, LINE Messaging API (บอทคู่) และ Flex Message ได้อย่างสมบูรณ์</p>
+            </div>
+            <div class="tag-group">
+              <span class="tag">JavaScript (ES6+ / Vite)</span>
+              <span class="tag">LINE LIFF v2 &amp; Messaging API</span>
+              <span class="tag">Tailwind CSS / Modern CSS</span>
+              <span class="tag">HTML5 Canvas Compression</span>
+            </div>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <h3>Cloud Database, Security &amp; Network Telemetry</h3>
+              <p>ออกแบบฐานข้อมูลคลาวด์ Supabase PostgreSQL พร้อมระบบล็อคสิทธิ์ Row-Level Security (RLS), Realtime WebSockets และระบบ Ping ตรวจสอบอุปกรณ์เครือข่าย 505 จุด</p>
+            </div>
+            <div class="tag-group">
+              <span class="tag">Supabase PostgreSQL &amp; RLS</span>
+              <span class="tag">Realtime WebSockets</span>
+              <span class="tag">Network Ping &amp; Latency Monitor</span>
+              <span class="tag">Leaflet GIS Satellite Map</span>
+            </div>
+          </div>
+
+          <div class="cap-card">
+            <div>
+              <h3>Python, Game Development &amp; 3D/2D Motion</h3>
+              <p>พัฒนาเกม 2D Action ด้วย Python (Pygame) ควบคู่กับพื้นฐานการทำ 3D และ 2D Motion Graphics ด้วย Cinema 4D และ After Effects</p>
+            </div>
+            <div class="tag-group">
+              <span class="tag">Python &amp; Pygame</span>
+              <span class="tag">Cinema 4D &amp; After Effects</span>
+              <span class="tag">Agentic AI Workflows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background / Story -->
+    <section class="section" id="story">
+      <div class="container">
+        <div class="story-layout">
+          <div class="story-prose">
+            <h2 class="section-title" style="margin-bottom: 20px;">เบื้องหลังการพัฒนาและช่องทางติดตามผลงาน</h2>
+            <p>
+              ผมเริ่มต้นจากการทำงานด้าน <strong>3D และ 2D Motion Graphics</strong> ในช่อง <strong>Zeroexter Desing (@zeroexterdesing44)</strong> ผลิต Intro และ Kinetic Typography ด้วยโปรแกรม Cinema 4D และ After Effects ควบคู่กับการฝึกเขียนโปรแกรมภาษา Python และสร้างเกม 2D Action (<strong>Shadow Must Die</strong>)
+            </p>
+            <p>
+              ต่อยอดสู่การพัฒนาเว็บแอปพลิเคชันและระบบปฏิบัติการองค์กรขนาดใหญ่ โดยรับหน้าที่ออกแบบและพัฒนาระบบ <strong>Foresee Field Operations v2.0</strong> (LINE LIFF + Supabase Realtime) และ <strong>TTS Company Ops Hub v2.0 PRO</strong> ซึ่งรวบรวม 16 โมดูลของบริษัท พร้อมระบบมอนิเตอร์สถานะกล้องวงจรปิดและตู้เครือข่าย 505 จุด ครอบคลุม 14 สภ.
+            </p>
+            <div style="margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="https://www.youtube.com/@zeroexterdesing44" target="_blank" rel="noopener noreferrer" class="btn btn-primary">ดูช่อง YouTube: Zeroexter Desing</a>
+              <a href="https://www.youtube.com/watch?v=swH3hVRdmJE" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">ตัวอย่างผลงานชิ้นที่ 1 (YouTube) ↗</a>
+              <a href="https://youtu.be/AL5hE4slh-U?si=FhwrGLEe5OvWxHSY" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">ตัวอย่างผลงานชิ้นที่ 2 (YouTube) ↗</a>
+            </div>
+          </div>
+
+          <div class="milestone-box">
+            <div class="milestone-entry">
+              <h4>TTS Company Ops Hub v2.0 PRO &amp; CCTV Ping 505 จุด</h4>
+              <p>แพลตฟอร์มกลาง 16 โมดูล คลังสินค้าคุมเลข S/N, ระบบ HR/OT/สลิปเงินเดือน RLS, ถอดแบบ BOQ, บอท LINE คู่ และระบบ Ping มอนิเตอร์กล้องวงจรปิด 505 จุดใน 14 สภ.</p>
+            </div>
+            <div class="milestone-entry">
+              <h4>Foresee Field Operations v2.0</h4>
+              <p>ระบบรายงานผลงานช่างภาคสนามผ่าน LINE LIFF v2, บีบอัดภาพด้วย HTML5 Canvas และซิงค์ข้อมูลแดชบอร์ดศูนย์สั่งการแบบ 0-Latency ด้วย Supabase Realtime</p>
+            </div>
+            <div class="milestone-entry">
+              <h4>Zeroexter Desing &amp; Python Programming</h4>
+              <p>ผลิตผลงาน 3D/2D Motion Graphics ในช่อง YouTube @zeroexterdesing44 และพัฒนาเกม 2D Action ด้วยภาษา Python และ Pygame</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">ช่องทางติดต่อ</h2>
+          <p class="section-lead">
+            พูดคุยเรื่องการพัฒนาระบบเว็บภายในองค์กร ระบบเชื่อมต่อ LINE OA / LIFF ระบบมอนิเตอร์เครือข่าย หรืองานครีเอทีฟ
+          </p>
+        </div>
+
+        <!-- Availability & Location Banner (ข้อ 4: ลาดพร้าว 122) -->
+
+        <div class="availability-banner">
+
+          <div class="avail-status">
+
+            <span class="pulse-dot"></span>
+
+            <span class="avail-title">สถานะ: พร้อมเริ่มงานทันที (Available for Work)</span>
+
+          </div>
+
+          <div class="avail-details">
+
+            <span class="avail-item">📍 <strong>พำนักปัจจุบัน:</strong> ลาดพร้าว 122, กรุงเทพฯ</span>
+
+            <span class="avail-divider">•</span>
+
+            <span class="avail-item">💼 <strong>รูปแบบที่สะดวก:</strong> On-site / Hybrid / Remote (ทั่ว กทม., อยุธยา และปริมณฑล)</span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="contact-cards">
+
+          <div class="contact-item">
+
+            <div class="contact-item-header">
+
+              <span>อีเมล (Email)</span>
+
+              <button type="button" class="copy-btn" data-copy="golsth888@gmail.com" title="คัดลอกอีเมล" aria-label="คัดลอกอีเมล">
+
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+
+                </svg>
+
+                <span>คัดลอก</span>
+
+              </button>
+
+            </div>
+
+            <a href="mailto:golsth888@gmail.com">golsth888@gmail.com</a>
+
+          </div>
+
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-header">
+
+              <span>เบอร์โทรศัพท์ (Phone)</span>
+
+              <button type="button" class="copy-btn" data-copy="0955304521" title="คัดลอกเบอร์โทร" aria-label="คัดลอกเบอร์โทร">
+
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+
+                </svg>
+
+                <span>คัดลอก</span>
+
+              </button>
+
+            </div>
+
+            <a href="tel:0955304521">095-530-4521</a>
+
+          </div>
+
+
+
+          <div class="contact-item">
+            <div class="contact-item-header">
+              <span>LINE (ไลน์)</span>
+              <button type="button" class="copy-btn" data-copy="nonpawit1235" title="คัดลอก LINE ID" aria-label="คัดลอก LINE ID">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>คัดลอก</span>
+              </button>
+            </div>
+            <a href="https://line.me/ti/p/~nonpawit1235" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อแอด LINE">nonpawit1235 ↗</a>
+            <span style="font-size: 0.76rem; color: var(--text-dim); margin-top: -4px;">(LINE ID: nonpawit1235 หรือค้นหาด้วยเบอร์)</span>
+          </div>
+
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-header">
+
+              <span>GitHub</span>
+
+            </div>
+
+            <a href="https://github.com/Ghoth9" target="_blank" rel="noopener noreferrer">github.com/Ghoth9 ↗</a>
+
+          </div>
+
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-header">
+
+              <span>ช่องผลงาน YouTube</span>
+
+            </div>
+
+            <a href="https://www.youtube.com/@zeroexterdesing44" target="_blank" rel="noopener noreferrer">@zeroexterdesing44 ↗</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>Nonpawit Senset (Ghoth) — Portfolio</span>
+      <span>พัฒนาโดย นนท์ปวิธ เส้นเศษ (ghoth / GHOTH9)</span>
+    </div>
+  </footer>
+
+  <!-- Native HTML <dialog> with closedby="any", Image Showcase, CCTV Ping Highlight & Video Player -->
+  <dialog id="projectDialog" class="project-dialog" closedby="any" aria-labelledby="dialogTitle">
+    <div class="dialog-inner">
+      <div class="dialog-header">
+        <span class="dialog-cat" id="dialogCat">หมวดหมู่</span>
+        <button type="button" class="dialog-close" id="dialogCloseBtn">ปิดหน้าต่าง (Esc)</button>
+      </div>
+      <div class="dialog-media-wrap">
+        <img id="dialogImage" src="" alt="Project preview" />
+      </div>
+      <div class="dialog-thumbs" id="dialogThumbs"></div>
+      
+      <!-- Special CCTV Ping Highlight Box (Rendered when project has pingHighlight) -->
+      <div id="dialogPingHighlight" class="ping-highlight-box" hidden></div>
+
+      <h2 class="dialog-title" id="dialogTitle">ชื่อโปรเจกต์</h2>
+      <p class="dialog-subtitle" id="dialogSubtitle">คำอธิบายย่อย</p>
+      <p class="dialog-desc" id="dialogDesc">รายละเอียด</p>
+      
+      <!-- Interactive Video Player Container (Rendered when project has videos) -->
+      <div id="dialogVideos" class="dialog-videos" hidden></div>
+      
+      <div class="dialog-highlights">
+        <h4>จุดเด่นและรายละเอียดการทำงานจริง</h4>
+        <ul id="dialogHighlights"></ul>
+      </div>
+      <div class="tag-group" id="dialogTags"></div>
+    </div>
+  </dialog>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
