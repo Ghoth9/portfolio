@@ -5,22 +5,22 @@ export const PROJECTS = [
     category: 'web',
     categoryName: 'Enterprise ERP & Operations Hub (16 Modules)',
     year: '2026',
-    image: '/images/projects/ttshub.png',
+    image: './images/projects/ttshub.png',
     gallery: [
-      '/images/projects/ttshub.png',
-      '/images/ttshub_captures/11_task_management.png',
-      '/images/ttshub_captures/12_system_manual.png',
-      '/images/projects/ttshub-ping.png',
-      '/images/ttshub_captures/01_dashboard.png',
-      '/images/ttshub_captures/02_cctv_gis_map.png',
-      '/images/ttshub_captures/03_admin_console.png',
-      '/images/ttshub_captures/04_stock_inventory.png',
-      '/images/ttshub_captures/05_ot_and_payslip.png',
-      '/images/ttshub_captures/06_repair_jobs.png',
-      '/images/ttshub_captures/07_contracts_summary.png',
-      '/images/ttshub_captures/08_quotation_system.png',
-      '/images/ttshub_captures/09_job_requisition.png',
-      '/images/ttshub_captures/10_borrow_equipment.png'
+      './images/projects/ttshub.png',
+      './images/ttshub_captures/11_task_management.png',
+      './images/ttshub_captures/12_system_manual.png',
+      './images/projects/ttshub-ping.png',
+      './images/ttshub_captures/01_dashboard.png',
+      './images/ttshub_captures/02_cctv_gis_map.png',
+      './images/ttshub_captures/03_admin_console.png',
+      './images/ttshub_captures/04_stock_inventory.png',
+      './images/ttshub_captures/05_ot_and_payslip.png',
+      './images/ttshub_captures/06_repair_jobs.png',
+      './images/ttshub_captures/07_contracts_summary.png',
+      './images/ttshub_captures/08_quotation_system.png',
+      './images/ttshub_captures/09_job_requisition.png',
+      './images/ttshub_captures/10_borrow_equipment.png'
     ],
     title: 'TTS Company Ops Hub v2.0 PRO',
     subtitle: 'ระบบบริหารจัดการงานปฏิบัติการองค์กรครบวงจร 16 โมดูล (บจก. ท้อป โทเทิล ซิสเทม)',
@@ -38,7 +38,7 @@ export const PROJECTS = [
         { label: 'กล้องดับ / ออฟไลน์', count: '35 จุด', statusClass: 'status-red' },
         { label: 'รอตรวจสอบสถานะ', count: '230 จุด', statusClass: 'status-gray' }
       ],
-      pingImage: '/images/projects/ttshub-ping.png'
+      pingImage: './images/projects/ttshub-ping.png'
     },
     highlights: [
       'ครอบคลุม 16 โมดูลในระบบเดียว: Admin Console & แถบประกาศวิ่งสด (Live Notice Ticker), ค้นหาด่วน (Ctrl+K) และเครื่องมือถอดแบบคำนวณต้นทุน BOQ',
@@ -54,12 +54,12 @@ export const PROJECTS = [
     category: 'automation',
     categoryName: 'Network Telemetry & GIS Monitoring (TTS Hub Highlight)',
     year: '2026',
-    image: '/images/projects/ttshub-ping.png',
+    image: './images/projects/ttshub-ping.png',
     gallery: [
-      '/images/projects/ttshub-ping.png',
-      '/images/ttshub_captures/02_cctv_gis_map.png',
-      '/images/projects/ttshub.png',
-      '/images/ttshub_captures/03_admin_console.png'
+      './images/projects/ttshub-ping.png',
+      './images/ttshub_captures/02_cctv_gis_map.png',
+      './images/projects/ttshub.png',
+      './images/ttshub_captures/03_admin_console.png'
     ],
     title: 'ระบบมอนิเตอร์สถานะกล้องดับ & ค่าความหน่วงสัญญาณ (Ping & Latency)',
     subtitle: 'ฟังก์ชันไฮไลต์เด่นใน TTS Ops Hub — ตรวจเช็คกล้องและอุปกรณ์เครือข่าย 505 จุด ครอบคลุม 14 สภ.',
@@ -77,7 +77,7 @@ export const PROJECTS = [
         { label: 'กล้องดับ / ออฟไลน์', count: '35 จุด', statusClass: 'status-red' },
         { label: 'รอตรวจสอบสถานะ', count: '230 จุด', statusClass: 'status-gray' }
       ],
-      pingImage: '/images/projects/ttshub-ping.png'
+      pingImage: './images/projects/ttshub-ping.png'
     },
     highlights: [
       'ตรวจสอบสถานะอุปกรณ์ทั้งหมด 505 จุด (แยกเป็น NVR/Switch และกล้องวงจรปิด) ครอบคลุมโครงการใน 14 สภ. ทุกๆ 2 นาทีโดยอัตโนมัติ',
@@ -93,9 +93,9 @@ export const PROJECTS = [
     category: 'web',
     categoryName: 'Field Operations & Real-Time Sync',
     year: '2026',
-    image: '/images/projects/foresee.png',
+    image: './images/projects/foresee.png',
     gallery: [
-      '/images/projects/foresee.png'
+      './images/projects/foresee.png'
     ],
     title: 'Foresee Field Operations & Task Management v2.0',
     subtitle: 'ระบบบริหารจัดการงานภาคสนามและรายงานผลปฏิบัติงานแบบ Real-Time (Foresee Technology)',
@@ -115,9 +115,9 @@ export const PROJECTS = [
     category: 'motion',
     categoryName: '3D / 2D Motion Graphics & YouTube Showcase',
     year: 'Archive',
-    image: '/images/projects/zeroexter-desing.png',
+    image: './images/projects/zeroexter-desing.png',
     gallery: [
-      '/images/projects/zeroexter-desing.png'
+      './images/projects/zeroexter-desing.png'
     ],
     channelUrl: 'https://www.youtube.com/@zeroexterdesing44',
     videos: [
@@ -152,9 +152,9 @@ export const PROJECTS = [
     category: 'iot',
     categoryName: 'Python Game Development (Pygame)',
     year: 'Archive',
-    image: '/images/projects/shadow-must-die.png',
+    image: './images/projects/shadow-must-die.png',
     gallery: [
-      '/images/projects/shadow-must-die.png'
+      './images/projects/shadow-must-die.png'
     ],
     title: 'Shadow Must Die — 2D Action Game (Pygame)',
     subtitle: 'เกมแอ็กชัน 2D พัฒนาด้วยภาษา Python และ Pygame พร้อมระบบควบคุม อนิเมชั่น และการคำนวณการชน',
@@ -172,9 +172,9 @@ export const PROJECTS = [
     category: 'motion',
     categoryName: 'Competitive Rhythm Gaming Profile',
     year: 'Profile',
-    image: '/images/projects/osumania.png',
+    image: './images/projects/osumania.png',
     gallery: [
-      '/images/projects/osumania.png'
+      './images/projects/osumania.png'
     ],
     title: 'osu!mania — Competitive Rhythm Gaming (GHOTH9)',
     subtitle: 'สถิติการเล่นเกมจับจังหวะความเร็วสูง osu!mania (อันดับ #124 ประเทศไทย / Peak Top 2,000 ของโลก)',
