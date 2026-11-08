@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flip } from 'gsap/Flip';
+import { animate, stagger } from 'motion';
 import { PROJECTS } from './projects.js';
 
 gsap.registerPlugin(ScrollTrigger, Flip);
@@ -239,14 +240,14 @@ function initWorkbench() {
     });
 
     if (stage) {
-      gsap.fromTo(stage, 
-        { opacity: 0.7, y: 3 }, 
-        { opacity: 1, y: 0, duration: 0.18, ease: 'power1.out', overwrite: 'auto' }
-      );
+      animate(stage, { opacity: [0.4, 1], y: [6, 0] }, { type: 'spring', stiffness: 400, damping: 25 });
     }
     titleEl.textContent = data.title;
     textEl.textContent = data.text;
     pillsEl.innerHTML = data.pills.map(p => '<span class="pill">' + p + '</span>').join('');
+    if (pillsEl.children.length > 0) {
+      animate(pillsEl.children, { scale: [0.8, 1], opacity: [0, 1] }, { delay: stagger(0.04), type: 'spring', stiffness: 460, damping: 18 });
+    }
   }
 
   function startAutoCycle() {
@@ -332,12 +333,11 @@ async function closeTopLayer(dialog) {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReduced) {
     dialog.setAttribute('data-closing', '');
-    const animations = dialog.getAnimations({ subtree: true });
-    if (animations.length > 0) {
-      await Promise.race([
-        Promise.allSettled(animations.map(a => a.finished)),
-        new Promise(r => setTimeout(r, 2000))
-      ]);
+    const dialogInner = dialog.querySelector('.dialog-inner');
+    if (dialogInner) {
+      try {
+        await animate(dialogInner, { scale: [1, 0.93], opacity: [1, 0], y: [0, 12] }, { duration: 0.16 }).finished;
+      } catch (e) {}
     }
     if (!dialog.hasAttribute('data-closing')) return;
     dialog.removeAttribute('data-closing');
@@ -506,6 +506,10 @@ function initProjectDialog() {
     tagsEl.innerHTML = data.tags.map(t => `<span class="tag">${t}</span>`).join('');
 
     dialog.showModal();
+    const dialogInner = dialog.querySelector('.dialog-inner');
+    if (dialogInner) {
+      animate(dialogInner, { scale: [0.91, 1], opacity: [0, 1], y: [16, 0] }, { type: 'spring', stiffness: 360, damping: 24 });
+    }
   }
 
   document.addEventListener('click', (e) => {
@@ -624,6 +628,7 @@ function initCopyButtons() {
       if (!val) return;
       const success = await copyToClipboard(val);
       if (success) {
+        animate(btn, { scale: [1, 1.28, 0.96, 1] }, { type: 'spring', stiffness: 600, damping: 12 });
         const originalHTML = btn.innerHTML;
         btn.innerHTML = `
           <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -641,6 +646,111 @@ function initCopyButtons() {
   });
 }
 
+
+// ==========================================================================
+// 7. Framer Motion Spring Magnetic Buttons
+// ==========================================================================
+function initFramerMagneticElements() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const magneticTargets = document.querySelectorAll('.btn-primary, .btn-secondary, .copy-btn, .filter-btn, .dialog-close, .brand');
+  magneticTargets.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width / 2) * 0.32;
+      const y = (e.clientY - rect.top - rect.height / 2) * 0.32;
+      animate(el, { x, y, scale: 1.03 }, { type: 'spring', stiffness: 350, damping: 20 });
+    });
+
+    el.addEventListener('mouseleave', () => {
+      animate(el, { x: 0, y: 0, scale: 1 }, { type: 'spring', stiffness: 450, damping: 14 });
+    });
+  });
+}
+
+// ==========================================================================
+// 8. Framer Motion Floating Mac Island Dock
+// ==========================================================================
+function initFramerMacDock() {
+  const dockWrap = document.getElementById('framerDock');
+  const dockInner = document.getElementById('framerDockInner');
+  if (!dockWrap || !dockInner) return;
+
+  const dockItems = Array.from(dockInner.querySelectorAll('.framer-dock-item:not(#dockScrollTop)'));
+  const scrollTopBtn = document.getElementById('dockScrollTop');
+
+  // Show dock when scrolled down past hero
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 280) {
+      dockWrap.classList.add('visible');
+    } else {
+      dockWrap.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  // Scroll to top button with spring
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      animate(scrollTopBtn, { scale: [1, 0.85, 1.2, 1] }, { type: 'spring', stiffness: 500, damping: 15 });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Framer Motion Spring Magnification on Hover
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced && window.innerWidth > 640) {
+    const allItems = Array.from(dockInner.querySelectorAll('.framer-dock-item'));
+    dockInner.addEventListener('mousemove', (e) => {
+      const maxDistance = 110;
+      allItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const itemCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(e.clientX - itemCenter);
+        if (distance < maxDistance) {
+          const power = 1 - (distance / maxDistance);
+          const scale = 1 + (0.34 * power);
+          const y = -6 * power;
+          animate(item, { scale, y }, { type: 'spring', stiffness: 400, damping: 22 });
+        } else {
+          animate(item, { scale: 1, y: 0 }, { type: 'spring', stiffness: 450, damping: 18 });
+        }
+      });
+    });
+
+    dockInner.addEventListener('mouseleave', () => {
+      allItems.forEach(item => {
+        animate(item, { scale: 1, y: 0 }, { type: 'spring', stiffness: 400, damping: 16 });
+      });
+    });
+  }
+
+  // Dock Active State Scroll Spy
+  const trackedSections = [
+    { id: 'hero', href: '#hero' },
+    { id: 'flagship', href: '#flagship' },
+    { id: 'heroWorkbench', href: '#heroWorkbench' },
+    { id: 'index', href: '#index' },
+    { id: 'contact', href: '#contact' }
+  ];
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 200;
+    trackedSections.forEach(({ id, href }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const top = el.offsetTop;
+      const height = el.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        dockItems.forEach(item => {
+          const match = item.getAttribute('href') === href;
+          item.classList.toggle('active', match);
+        });
+      }
+    });
+  }, { passive: true });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderProjectGallery();
   initWorkbench();
@@ -649,4 +759,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initCopyButtons();
   initGSAPAnimations();
+  initFramerMagneticElements();
+  initFramerMacDock();
 });

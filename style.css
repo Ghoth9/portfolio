@@ -1687,3 +1687,124 @@ dialog.project-dialog::backdrop {
   border-color: rgba(16, 185, 129, 0.4);
   color: #10B981;
 }
+
+/* ==========================================================================
+   FRAMER MOTION FLOATING MAC ISLAND DOCK
+   ========================================================================== */
+.framer-dock-wrap {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 85;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.framer-dock-wrap.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.framer-dock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(13, 16, 23, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 6px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.framer-dock-item {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease, background 0.15s ease;
+  transform-origin: bottom center;
+  user-select: none;
+}
+
+.framer-dock-item:hover,
+.framer-dock-item.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.framer-dock-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.framer-dock-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+/* Tooltip on hover */
+.framer-dock-item::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(10, 12, 16, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+
+.framer-dock-item:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 640px) {
+  .framer-dock-wrap {
+    bottom: 16px;
+  }
+  .framer-dock {
+    padding: 4px 8px;
+    gap: 4px;
+  }
+  .framer-dock-item {
+    width: 36px;
+    height: 36px;
+  }
+  .framer-dock-item::before {
+    display: none;
+  }
+}
