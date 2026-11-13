@@ -145,45 +145,5 @@ export const PROJECTS = [
       'ออกแบบแอนิเมชันให้เคลื่อนไหวสอดประสานกับจังหวะเสียงดนตรี (Audio-Reactive & Beat Matching)',
       'ตัวอย่างวิดีโอที่นำมาแสดงเป็นเพียงส่วนหนึ่งของผลงานในช่อง YouTube @zeroexterdesing44'
     ]
-  },
-  {
-    id: 'shadow-must-die',
-    featured: false,
-    category: 'iot',
-    categoryName: 'Python Game Development (Pygame)',
-    year: 'Archive',
-    image: './images/projects/shadow-must-die.png',
-    gallery: [
-      './images/projects/shadow-must-die.png'
-    ],
-    title: 'Shadow Must Die — 2D Action Game (Pygame)',
-    subtitle: 'เกมแอ็กชัน 2D พัฒนาด้วยภาษา Python และ Pygame พร้อมระบบควบคุม อนิเมชั่น และการคำนวณการชน',
-    summary: 'โปรเจกต์พัฒนาเกมแอ็กชันมุมมองด้านข้าง 2D Side-scrolling ด้วยภาษา Python และไลบรารี Pygame มีระบบควบคุมการเคลื่อนไหว กระโดด ยิงกระสุน ตรวจจับ Hitbox ศัตรู และหลอดเลือด',
-    tags: ['Python', 'Pygame', '2D Game Loop', 'Sprite & Hitbox'],
-    highlights: [
-      'เขียนระบบควบคุมตัวละครหลัก (LEFT/RIGHT เคลื่อนที่, UP กระโดด, SPACE ยิงกระสุนโจมตี) พร้อมระบบคำนวณการชน (Collision Detection)',
-      'ออกแบบระบบระดับความยาก (Level & Speed scaling), การเก็บคะแนน (Score / Hiscore) และระบบพลังชีวิต (Lives)',
-      'จัดการการเรนเดอร์ฉากหลังป่าหลายเลเยอร์ (Background Rendering) และอนิเมชั่นของตัวละครรวมถึงศัตรู (Goblin) ด้วย Pygame'
-    ]
-  },
-  {
-    id: 'osu-mania-profile',
-    featured: false,
-    category: 'motion',
-    categoryName: 'Competitive Rhythm Gaming Profile',
-    year: 'Profile',
-    image: './images/projects/osumania.png',
-    gallery: [
-      './images/projects/osumania.png'
-    ],
-    title: 'osu!mania — Competitive Rhythm Gaming (GHOTH9)',
-    subtitle: 'สถิติการเล่นเกมจับจังหวะความเร็วสูง osu!mania (อันดับ #124 ประเทศไทย / Peak Top 2,000 ของโลก)',
-    summary: 'โปรไฟล์และสถิติการแข่งขันในเกม osu!mania (ชื่อผู้เล่น GHOTH9) ที่สะท้อนถึงการฝึกฝนปฏิกิริยาตอบสนอง สมาธิ และความแม่นยำระดับเสี้ยววินาที',
-    tags: ['Rank #124 Thailand', '11,030 PP', '38,446 Plays', '96.32% Accuracy'],
-    highlights: [
-      'อันดับ #124 ของประเทศไทย (National Ranking #124) และอันดับโลก #4,759 (เคยขึ้นสูงสุดระดับ Peak Top 2,000 Global)',
-      'สะสมคะแนน Performance Points รวม 11,030 pp พร้อมความแม่นยำเฉลี่ยสูงถึง 96.32%',
-      'สถิติจำนวนรอบการเล่นสะสมมากกว่า 38,446 รอบ (Play Count 38,446) และ Max Combo สูงสุด 5,500x'
-    ]
   }
 ];

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nonpawit Senset (Ghoth) — พอร์ตโฟลิโอพัฒนาระบบเว็บแอปพลิเคชันองค์กร (TTS Ops Hub 16 โมดูล, Foresee Field Ops), ระบบมอนิเตอร์ Ping กล้องวงจรปิด 505 จุด (14 สภ.), เกม Python และงาน 3D/2D Motion Graphics" />
+  <meta name="description" content="Nonpawit Senset (Ghoth) — พอร์ตโฟลิโอพัฒนาระบบเว็บแอปพลิเคชันองค์กร (TTS Ops Hub 16 โมดูล, Foresee Field Ops), ระบบมอนิเตอร์ Ping กล้องวงจรปิด 505 จุด (14 สภ.), Python Automation และงาน 3D/2D Motion Graphics" />
   <title>Nonpawit Senset (Ghoth) — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
 
   <!-- Header -->
   <header class="site-header" id="navbar">
@@ -22,7 +23,7 @@
 
       <nav class="nav-links" id="navLinks" aria-label="เมนูหลัก">
         <a href="#flagship" class="nav-link active" data-section="flagship">ผลงานเด่น</a>
-        <a href="#index" class="nav-link" data-section="index">คลังโปรเจกต์ (6)</a>
+        <a href="#index" class="nav-link" data-section="index">คลังโปรเจกต์ (4)</a>
         <a href="#capabilities" class="nav-link" data-section="capabilities">ความเชี่ยวชาญ</a>
         <a href="#story" class="nav-link" data-section="story">ที่มาและช่องทาง</a>
         <a href="#contact" class="nav-link" data-section="contact">ติดต่อ</a>
@@ -35,11 +36,17 @@
   <main>
     <!-- Hero -->
     <section class="hero" id="hero">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-layout">
           <div class="hero-copy">
+            <div class="hero-eyebrow">
+              <span class="eyebrow-dot"></span>
+              <span>Full-Stack Developer &amp; Systems Architect</span>
+            </div>
             <h1 class="hero-headline" id="heroHeadline">
-              พัฒนาเว็บแอปพลิเคชัน ระบบบริหารจัดการองค์กร และงานมัลติมีเดีย
+              พัฒนาเว็บแอปพลิเคชัน <span class="headline-accent">ระบบบริหารจัดการองค์กร</span> และงานมัลติมีเดีย
             </h1>
             <p class="hero-description" id="heroDesc">
               ผมเป็นนักพัฒนาสาย <strong>Full-Stack, Enterprise Web และ Data Automation</strong> เน้นสร้างระบบที่ตอบโจทย์การทำงานจริง ตั้งแต่แพลตฟอร์ม ERP จัดการปฏิบัติการองค์กร (TTS Ops Hub) ระบบรายงานช่างภาคสนามผ่าน LINE LIFF (Foresee) ไปจนถึงผลงานออกแบบ <strong>3D/2D Motion Graphics</strong>
@@ -55,7 +62,7 @@
 
             <div class="hero-cta-row" id="heroCta">
               <a href="#flagship" class="btn btn-primary">ดูผลงานไฮไลต์พร้อมภาพหน้าจอจริง</a>
-              <a href="#index" class="btn btn-secondary">สำรวจคลังโปรเจกต์ทั้งหมด (6)</a>
+              <a href="#index" class="btn btn-secondary">สำรวจคลังโปรเจกต์ทั้งหมด (4)</a>
             </div>
 
             <div class="hero-facts" id="heroFacts">
@@ -76,10 +83,10 @@
 
           <!-- Interactive Workbench Summary -->
           <aside class="workbench-card" id="heroWorkbench" aria-label="สรุปขอบเขตงาน 4 ด้าน">
-            <div class=workbench-nav role=tablist>
+            <div class="workbench-nav" role="tablist">
               <button type="button" class="wb-tab active" data-tab="web" role="tab" aria-selected="true">ระบบ ERP &amp; ภาคสนาม</button>
               <button type="button" class="wb-tab" data-tab="auto" role="tab" aria-selected="false">ระบบ Ping กล้อง &amp; GIS</button>
-              <button type="button" class="wb-tab" data-tab="iot" role="tab" aria-selected="false">เกม Python &amp; Logic</button>
+              <button type="button" class="wb-tab" data-tab="ai" role="tab" aria-selected="false">Python &amp; Agentic AI</button>
               <button type="button" class="wb-tab" data-tab="motion" role="tab" aria-selected="false">งาน 3D/2D Motion</button>
             </div>
             <div class="workbench-stage" id="wbStage">
@@ -227,22 +234,21 @@
       </div>
     </section>
 
-    <!-- Complete Visual Project Gallery (All 6 Real Projects with Images + GSAP Flip) -->
+    <!-- Complete Visual Project Gallery (4 Core Projects with Images + GSAP Flip) -->
     <section class="section" id="index">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">คลังโปรเจกต์และผลงานทั้งหมด (6 รายการ)</h2>
+          <h2 class="section-title">คลังโปรเจกต์และผลงานทั้งหมด (4 รายการ)</h2>
           <p class="section-lead">
-            รวมทุกโปรเจกต์พร้อมรูปภาพหน้าจอจริง กดเลือกหมวดหมู่เพื่อดูแอนิเมชันสลับการ์ด (GSAP Flip) หรือคลิกที่การ์ดเพื่อเปิดดูภาพขนาดใหญ่และวิดีโอตัวอย่าง
+            รวมทุกโปรเจกต์หลักพร้อมรูปภาพหน้าจอจริง กดเลือกหมวดหมู่เพื่อดูแอนิเมชันสลับการ์ด หรือคลิกที่การ์ดเพื่อเปิดดูภาพขนาดใหญ่และวิดีโอตัวอย่าง
           </p>
         </div>
 
         <div class="filter-tabs" role="group" aria-label="กรองหมวดหมู่โปรเจกต์">
-          <button type="button" class="filter-btn active" data-filter="all">ทั้งหมด (6)</button>
+          <button type="button" class="filter-btn active" data-filter="all">ทั้งหมด (4)</button>
           <button type="button" class="filter-btn" data-filter="web">เว็บแอป &amp; ระบบองค์กร (2)</button>
           <button type="button" class="filter-btn" data-filter="automation">ระบบ Ping กล้อง &amp; เครือข่าย (1)</button>
-          <button type="button" class="filter-btn" data-filter="iot">เกม Python &amp; ตรรกะโปรแกรม (1)</button>
-          <button type="button" class="filter-btn" data-filter="motion">3D/2D Motion &amp; โปรไฟล์ (2)</button>
+          <button type="button" class="filter-btn" data-filter="motion">3D/2D Motion Graphics (1)</button>
         </div>
 
         <div class="gallery-grid" id="galleryGrid">
@@ -290,11 +296,11 @@
 
           <div class="cap-card">
             <div>
-              <h3>Python, Game Development &amp; 3D/2D Motion</h3>
-              <p>พัฒนาเกม 2D Action ด้วย Python (Pygame) ควบคู่กับพื้นฐานการทำ 3D และ 2D Motion Graphics ด้วย Cinema 4D และ After Effects</p>
+              <h3>Python Automation, AI &amp; 3D/2D Motion</h3>
+              <p>พัฒนาสคริปต์อัตโนมัติด้วย Python และการประยุกต์ใช้ Agentic AI Workflows ควบคู่กับงานออกแบบ 3D และ 2D Motion Graphics ด้วย Cinema 4D และ After Effects</p>
             </div>
             <div class="tag-group">
-              <span class="tag">Python &amp; Pygame</span>
+              <span class="tag">Python Automation</span>
               <span class="tag">Cinema 4D &amp; After Effects</span>
               <span class="tag">Agentic AI Workflows</span>
             </div>
@@ -310,7 +316,7 @@
           <div class="story-prose">
             <h2 class="section-title" style="margin-bottom: 20px;">เบื้องหลังการพัฒนาและช่องทางติดตามผลงาน</h2>
             <p>
-              ผมเริ่มต้นจากการทำงานด้าน <strong>3D และ 2D Motion Graphics</strong> ในช่อง <strong>Zeroexter Desing (@zeroexterdesing44)</strong> ผลิต Intro และ Kinetic Typography ด้วยโปรแกรม Cinema 4D และ After Effects ควบคู่กับการฝึกเขียนโปรแกรมภาษา Python และสร้างเกม 2D Action (<strong>Shadow Must Die</strong>)
+              ผมเริ่มต้นจากการทำงานด้าน <strong>3D และ 2D Motion Graphics</strong> ในช่อง <strong>Zeroexter Desing (@zeroexterdesing44)</strong> ผลิต Intro และ Kinetic Typography ด้วยโปรแกรม Cinema 4D และ After Effects ควบคู่กับการฝึกเขียนโปรแกรมภาษา Python และสร้างระบบ Automation
             </p>
             <p>
               ต่อยอดสู่การพัฒนาเว็บแอปพลิเคชันและระบบปฏิบัติการองค์กรขนาดใหญ่ โดยรับหน้าที่ออกแบบและพัฒนาระบบ <strong>Foresee Field Operations v2.0</strong> (LINE LIFF + Supabase Realtime) และ <strong>TTS Company Ops Hub v2.0 PRO</strong> ซึ่งรวบรวม 16 โมดูลของบริษัท พร้อมระบบมอนิเตอร์สถานะกล้องวงจรปิดและตู้เครือข่าย 505 จุด ครอบคลุม 14 สภ.
@@ -332,8 +338,8 @@
               <p>ระบบรายงานผลงานช่างภาคสนามผ่าน LINE LIFF v2, บีบอัดภาพด้วย HTML5 Canvas และซิงค์ข้อมูลแดชบอร์ดศูนย์สั่งการแบบ 0-Latency ด้วย Supabase Realtime</p>
             </div>
             <div class="milestone-entry">
-              <h4>Zeroexter Desing &amp; Python Programming</h4>
-              <p>ผลิตผลงาน 3D/2D Motion Graphics ในช่อง YouTube @zeroexterdesing44 และพัฒนาเกม 2D Action ด้วยภาษา Python และ Pygame</p>
+              <h4>Zeroexter Desing &amp; Python Automation</h4>
+              <p>ผลิตผลงาน 3D/2D Motion Graphics ในช่อง YouTube @zeroexterdesing44 และพัฒนาสคริปต์ Python จัดการข้อมูลและเชื่อมต่อ Workflow อัตโนมัติ</p>
             </div>
           </div>
         </div>
@@ -534,7 +540,7 @@
       <a href="#heroWorkbench" class="framer-dock-item" data-tooltip="ระบบ ERP 16 โมดูล &amp; Ping กล้อง" aria-label="ระบบ ERP">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
       </a>
-      <a href="#index" class="framer-dock-item" data-tooltip="คลังโปรเจกต์ทั้งหมด (6 ผลงาน)" aria-label="คลังผลงาน">
+      <a href="#index" class="framer-dock-item" data-tooltip="คลังโปรเจกต์ทั้งหมด (4 ผลงาน)" aria-label="คลังผลงาน">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
       </a>
       <a href="#contact" class="framer-dock-item" data-tooltip="ติดต่อ / LINE ID: nonpawit1235" aria-label="ช่องทางติดต่อ">

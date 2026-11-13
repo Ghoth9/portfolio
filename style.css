@@ -1073,8 +1073,8 @@ dialog.project-dialog::backdrop {
 /* Visual Project Gallery Grid (All 11 Projects with Images) */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   position: relative;
 }
 
@@ -1807,4 +1807,156 @@ dialog.project-dialog::backdrop {
   .framer-dock-item::before {
     display: none;
   }
+}
+
+/* ==========================================================================
+   MODERN VISUAL UPGRADES (Scroll Bar, Hero Grid, Aurora, Card Spotlights)
+   ========================================================================== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--accent-warm) 0%, var(--accent-amber) 55%, var(--accent-blue) 100%);
+  box-shadow: 0 0 12px rgba(232, 93, 42, 0.65);
+  z-index: 120;
+  pointer-events: none;
+  transition: width 0.06s linear;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 75% 70% at 50% 40%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 40%, #000 35%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-ambient-glow {
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 640px;
+  height: 520px;
+  background:
+    radial-gradient(circle at 65% 40%, rgba(232, 93, 42, 0.14) 0%, transparent 55%),
+    radial-gradient(circle at 30% 70%, rgba(56, 189, 248, 0.09) 0%, transparent 55%);
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  margin-bottom: 18px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-body);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-warm);
+  box-shadow: 0 0 8px var(--accent-warm);
+}
+
+.headline-accent {
+  background: linear-gradient(120deg, #FFFFFF 15%, #FFB088 65%, #E85D2A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gallery Thumbnail Badge & Hover Zoom */
+.gallery-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-thumb img {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover .gallery-thumb img {
+  transform: scale(1.045);
+}
+
+.gallery-year-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(11, 12, 14, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-main);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  z-index: 2;
+}
+
+/* Mouse-Tracking Radial Spotlight on All Cards */
+.gallery-card,
+.flagship-item,
+.cap-card,
+.contact-item {
+  position: relative;
+}
+
+.gallery-card::after,
+.flagship-item::after,
+.cap-card::after,
+.contact-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.055),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-card:hover::after,
+.flagship-item:hover::after,
+.cap-card:hover::after,
+.contact-item:hover::after {
+  opacity: 1;
 }

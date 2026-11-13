@@ -19,10 +19,10 @@ const WORKBENCH_DATA = {
     text: 'ฟังก์ชันไฮไลต์เด่นใน TTS Ops Hub ที่ตรวจสอบสถานะออนไลน์และค่า Ping (ms) ของกล้องวงจรปิดและตู้ควบคุม NVR/Switch 505 จุด ครอบคลุม 14 สภ. อัตโนมัติทุก 2 นาที พร้อมแจ้งเตือนหน้าเว็บเมื่อกล้องดับและเชื่อมพิกัดแผนที่ดาวเทียม GIS',
     pills: ['505 Devices Monitored', '14 Police Stations (สภ.)', 'Real-time Ping (1-14ms)', 'Satellite GIS Map']
   },
-  iot: {
-    title: 'การพัฒนาเกม 2D ด้วย Python (Pygame) และระบบตรรกะโปรแกรม',
-    text: 'สร้างเกมแอ็กชัน 2D ด้านข้าง Shadow Must Die ด้วยภาษา Python และ Pygame ครบทั้งระบบการเคลื่อนไหว กระโดด ยิงกระสุน ตรวจจับการชน (Hitbox) ระบบพลังชีวิต และระบบคะแนน',
-    pills: ['Shadow Must Die (Pygame)', 'Python 2D Game Loop', 'Sprite & Hitbox System', 'Action Mechanics']
+  ai: {
+    title: 'Python Automation, Data Pipeline และ Agentic AI',
+    text: 'เขียนสคริปต์ Python เพื่อลดงานซ้ำซ้อนและประมวลผลข้อมูลองค์กรอัตโนมัติ ควบคู่กับการประยุกต์ใช้ Agentic AI Workflows และฐานข้อมูลคลาวด์ Supabase PostgreSQL',
+    pills: ['Python Automation', 'Agentic AI Workflows', 'Supabase PostgreSQL', 'Data Processing']
   },
   motion: {
     title: 'งาน 3D และ 2D Motion Graphics (Cinema 4D & After Effects)',
@@ -42,6 +42,7 @@ function renderProjectGallery() {
     <article class="gallery-card" data-category="${p.category}" data-project-id="${p.id}" tabindex="0" role="button" aria-label="ดูรายละเอียด ${p.title}">
       <div class="gallery-thumb">
         <img src="${p.image}" alt="${p.title}" loading="lazy" />
+        <span class="gallery-year-badge">${p.year}</span>
       </div>
       <div class="gallery-body">
         <span class="gallery-cat">${p.categoryName}</span>
@@ -52,7 +53,7 @@ function renderProjectGallery() {
           <div class="tag-group">
             ${p.tags.slice(0, 2).map(t => `<span class="tag">${t}</span>`).join('')}
           </div>
-          <span class="open-detail-label">ดูรูปและข้อมูล</span>
+          <span class="open-detail-label">ดูรูปและข้อมูล ↗</span>
         </div>
       </div>
     </article>
@@ -751,6 +752,29 @@ function initFramerMacDock() {
   }, { passive: true });
 }
 
+// ==========================================================================
+// 9. Top Scroll Progress Bar & Contact Spotlight
+// ==========================================================================
+function initScrollProgressBar() {
+  const bar = document.getElementById('scrollProgressBar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      bar.style.width = `${progress}%`;
+    }, { passive: true });
+  }
+
+  document.querySelectorAll('.contact-item').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderProjectGallery();
   initWorkbench();
@@ -761,4 +785,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initGSAPAnimations();
   initFramerMagneticElements();
   initFramerMacDock();
+  initScrollProgressBar();
 });
